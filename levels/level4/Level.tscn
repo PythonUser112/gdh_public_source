@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://levels/LevelLoader.gd" type="Script" id=2]
+[ext_resource path="res://assets/audio/music.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/vanishing-horizon.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/GamesPackT1_SR.ogg" type="AudioStream" id=5]
+[ext_resource path="res://levels/level4/AudioPlayer.gd" type="Script" id=6]
+
+[node name="MusicBox" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+collision_mask = 2
+format = 1
+tile_data = PoolIntArray( -2, 3, 0, 65534, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 3, 0, 65549, 3, 0, 65550, 3, 0, 65551, 3, 0, 65552, 3, 0, 65553, 3, 0, 65554, 3, 0, 65555, 3, 0, 65558, 3, 0, 65559, 3, 0, 65560, 3, 0, 65561, 3, 0, 65562, 3, 0, 65563, 3, 0, 65564, 3, 0, 65567, 3, 0, 65568, 3, 0, 65569, 3, 0, 65570, 3, 0, 65571, 3, 0, 65572, 3, 0, 131073, 3, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131082, 3, 0, 131083, 3, 0, 131084, 3, 0, 131085, 3, 0, 131091, 3, 0, 131092, 3, 0, 131093, 3, 0, 131094, 3, 0, 131100, 3, 0, 131101, 3, 0, 131102, 3, 0, 131103, 3, 0 )
+
+[node name="Items" type="TileMap" parent="."]
+position = Vector2( 2, 0 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+format = 1
+tile_data = PoolIntArray( 65538, 7, 0, 65539, 9, 0, 65547, 7, 0, 65548, 9, 0, 65556, 7, 0, 65557, 9, 0, 65565, 7, 0, 65566, 9, 0, 131098, 6, 0 )
+
+[node name="Danger" type="TileMap" parent="."]
+position = Vector2( 2, 0 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+collision_layer = 4
+collision_mask = 2
+format = 1
+
+[node name="Audio" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="Level1" type="AudioStreamPlayer2D" parent="Audio"]
+position = Vector2( 300, 150 )
+stream = ExtResource( 4 )
+max_distance = 400.0
+attenuation = 0.15932
+
+[node name="Level2" type="AudioStreamPlayer2D" parent="Audio"]
+position = Vector2( 1200, 150 )
+stream = ExtResource( 3 )
+max_distance = 400.0
+attenuation = 0.15932
+
+[node name="Level3" type="AudioStreamPlayer2D" parent="Audio"]
+position = Vector2( 2100, 150 )
+stream = ExtResource( 5 )
+max_distance = 400.0
+attenuation = 0.15932
