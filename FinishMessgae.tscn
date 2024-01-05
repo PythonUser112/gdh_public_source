@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://FinishMessage.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+margin_right = 948.0
+margin_bottom = 65.0
+text = "
+
+
+"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 69.0
+margin_right = 948.0
+margin_bottom = 180.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "           You have reached
+                 the Finish"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+margin_top = 184.0
+margin_right = 948.0
+margin_bottom = 249.0
+text = "
+
+
+"
+
+[node name="Retry" type="Button" parent="VBoxContainer"]
+margin_top = 253.0
+margin_right = 948.0
+margin_bottom = 359.0
+custom_fonts/font = ExtResource( 1 )
+text = "Retry"
+icon = ExtResource( 3 )
+
+[node name="MainMenu" type="Button" parent="VBoxContainer"]
+margin_top = 363.0
+margin_right = 948.0
+margin_bottom = 469.0
+custom_fonts/font = ExtResource( 1 )
+text = "Main Menu"
+icon = ExtResource( 3 )
+[connection signal="pressed" from="VBoxContainer/Retry" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="VBoxContainer/MainMenu" to="." method="_on_MainMenu_pressed"]
