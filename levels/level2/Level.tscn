@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://levels/LevelLoader.gd" type="Script" id=2]
+[ext_resource path="res://assets/Kenney Thick.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/audio/music.wav" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Level2" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="C1" type="ColorRect" parent="."]
+margin_left = -1345.0
+margin_top = -1544.0
+margin_right = 2802.0
+margin_bottom = 1742.0
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C2" type="ColorRect" parent="."]
+margin_left = 2801.0
+margin_top = 793.0
+margin_right = 3700.0
+margin_bottom = 902.0
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C3" type="ColorRect" parent="."]
+margin_left = 2801.0
+margin_top = 692.122
+margin_right = 3700.0
+margin_bottom = 794.122
+color = Color( 0, 0, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C6" type="ColorRect" parent="."]
+margin_left = 2801.0
+margin_top = 901.0
+margin_right = 3700.0
+margin_bottom = 1000.0
+color = Color( 0, 0, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C4" type="ColorRect" parent="."]
+margin_left = 2798.0
+margin_top = -25.248
+margin_right = 3697.0
+margin_bottom = 699.752
+color = Color( 0, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C7" type="ColorRect" parent="."]
+margin_left = 2804.0
+margin_top = 1000.84
+margin_right = 3703.0
+margin_bottom = 1725.84
+color = Color( 0, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C5" type="ColorRect" parent="."]
+margin_left = 3700.0
+margin_top = -27.0
+margin_right = 4599.0
+margin_bottom = 1707.0
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+collision_mask = 2
+format = 1
+tile_data = PoolIntArray( 1, 6, 0, 28, 6, 0, 131100, 6, 0, 196608, 3, 0, 196609, 3, 0, 196610, 3, 0, 196611, 3, 0, 196612, 3, 0, 196636, 6, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262148, 3, 0, 262149, 3, 0, 262151, 3, 0, 262152, 3, 0, 262172, 6, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327693, 3, 0, 327694, 3, 0, 327695, 3, 0, 327696, 3, 0, 327708, 6, 0, 393232, 3, 0, 393233, 3, 0, 393234, 3, 0, 393244, 6, 0, 458770, 3, 0, 458771, 3, 0, 458772, 3, 0, 458780, 6, 0, 524308, 3, 0, 524309, 3, 0, 524310, 3, 0, 524311, 3, 0, 524312, 3, 0, 524313, 3, 0, 524314, 3, 0, 524315, 3, 0, 524317, 1073741826, 0, 524318, 1073741826, 0, 524319, 1073741826, 0, 524320, 1073741826, 0, 524321, 1073741826, 0, 524322, 1610612738, 0, 524323, 1610612738, 0, 524324, 1610612738, 0, 524325, 1073741826, 0, 589852, 6, 0, 655388, 6, 0, 720924, 6, 0, 786460, 6, 0, 851996, 6, 0, 917532, 6, 0, 983068, 6, 0, 1048604, 6, 0 )
+
+[node name="Danger" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+collision_layer = 4
+collision_mask = 2
+format = 1
+tile_data = PoolIntArray( 196613, 4, 0, 262147, 2, 0, 262150, 4, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262183, -2147483646, 0, 327719, -2147483646, 0, 393255, -2147483646, 0, 458777, 2, 0, 458786, 2, 0, 458791, -2147483646, 0, 524326, 2, 0 )
+
+[node name="Items" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+format = 1
+tile_data = PoolIntArray( 196616, 10, 0, 262180, 1610612742, 0, 327716, 1610612742, 0, 393252, 1610612742, 0, 458788, 1610612742, 0 )
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 20.0
+margin_top = 34.0
+margin_right = 1486.0
+margin_bottom = 317.0
+custom_fonts/font = SubResource( 1 )
+text = "What...    the fuck"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 2494.98
+margin_top = 431.416
+margin_right = 3292.98
+margin_bottom = 727.416
+custom_fonts/font = SubResource( 1 )
+text = "Yeah,               babe!"
+__meta__ = {
+"_edit_use_anchors_": false
+}

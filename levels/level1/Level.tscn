@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/audio/vanishing-horizon.ogg" type="AudioStream" id=2]
+[ext_resource path="res://levels/LevelLoader.gd" type="Script" id=3]
+[ext_resource path="res://assets/Kenney Thick.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Wall.png" type="Texture" id=5]
+[ext_resource path="res://TrigHandler.tscn" type="PackedScene" id=6]
+[ext_resource path="res://FlyingBox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://levels/level1/TrigCFG.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -555.0
+margin_top = -559.0
+margin_right = 1798.0
+margin_bottom = 1492.0
+color = Color( 0, 0, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 1768.0
+margin_top = -573.127
+margin_right = 4256.0
+margin_bottom = 1477.87
+color = Color( 0, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 4191.0
+margin_top = -994.0
+margin_right = 6608.0
+margin_bottom = 1478.0
+color = Color( 0, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = 6593.0
+margin_top = -994.0
+margin_right = 8801.0
+margin_bottom = 1479.0
+color = Color( 1, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+collision_mask = 2
+format = 1
+tile_data = PoolIntArray( -131074, 3, 0, -196605, 3, 0, -196533, 6, 0, -65538, 3, 0, -131069, 3, 0, -130997, 6, 0, -2, 3, 0, -65533, 3, 0, -65461, 6, 0, 65534, 3, 0, 3, 3, 0, 75, 6, 0, 131070, 3, 0, 65597, 3, 0, 65611, 6, 0, 196606, 3, 0, 196607, 3, 0, 131090, 3, 0, 131091, 3, 0, 131092, 3, 0, 131093, 3, 0, 131094, 3, 0, 131095, 3, 0, 131096, 3, 0, 131097, 3, 0, 131098, 3, 0, 131099, 3, 0, 131100, 3, 0, 131101, 3, 0, 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 131107, 3, 0, 131108, 3, 0, 131109, 3, 0, 131110, 3, 0, 131111, 3, 0, 131133, 3, 0, 131147, 6, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 3, 0, 196611, 3, 0, 196619, 3, 0, 196620, 3, 0, 196623, 3, 0, 196648, 3, 0, 196649, 3, 0, 196669, 3, 0, 196683, 6, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262149, 3, 0, 262150, 3, 0, 262151, 3, 0, 262152, 3, 0, 262153, 3, 0, 262154, 3, 0, 262155, 3, 0, 262159, 3, 0, 262186, 3, 0, 262187, 3, 0, 262188, 3, 0, 262189, 3, 0, 262190, 3, 0, 262191, 3, 0, 262192, 3, 0, 262193, 3, 0, 262194, 3, 0, 262195, 3, 0, 262196, 3, 0, 262197, 3, 0, 262198, 3, 0, 262199, 3, 0, 262200, 3, 0, 262201, 3, 0, 262202, 3, 0, 262203, 3, 0, 262204, 3, 0, 262205, 3, 0, 262206, 3, 0, 262207, 3, 0, 262208, 3, 0, 262209, 3, 0, 262218, 3, 0, 262219, 3, 0, 393214, 3, 0, 393215, 3, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327695, 3, 0, 327704, 3, 0, 327746, 3, 0, 327747, 3, 0, 327748, 3, 0, 327749, 3, 0, 393231, 3, 0, 393232, 3, 0, 393233, 3, 0, 393238, 3, 0, 393239, 3, 0, 393240, 3, 0, 458769, 3, 0, 458770, 3, 0, 458771, 3, 0, 458772, 3, 0, 458773, 3, 0, 458774, 3, 0, 458798, -1073741822, 0, 458799, -1073741821, 0, 524330, 3, 0, 524334, -1073741822, 0, 524335, -1073741821, 0, 589862, 3, 0, 589863, 3, 0, 589864, 3, 0, 589865, 3, 0, 589866, 3, 0, 589867, 1610612739, 0, 589871, -1073741821, 0, 655395, 3, 0, 655396, 3, 0, 655397, 3, 0, 655398, 3, 0, 655399, 3, 0, 720928, 3, 0, 720929, 3, 0, 720930, 3, 0, 720931, 3, 0, 720932, 3, 0, 720940, -1073741821, 0, 786457, 3, 0, 786458, 3, 0, 786459, 3, 0, 786460, 3, 0, 786461, 3, 0, 786462, 3, 0, 786463, 3, 0, 786464, 3, 0, 786465, 3, 0, 852014, -1073741821, 0, 852017, -1073741821, 0, 852020, -1073741821, 0, 852023, -1073741821, 0, 983097, -1073741821, 0, 983098, 3, 0, 983101, 3, 0, 983102, 3, 0, 983105, 3, 0, 983106, 3, 0, 983107, 3, 0, 983110, 3, 0, 983111, 3, 0 )
+
+[node name="Danger" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+collision_layer = 4
+collision_mask = 2
+format = 1
+tile_data = PoolIntArray( 65557, 2, 0, 65561, 2, 0, 65566, 2, 0, 65569, 2, 0, 65574, 2, 0, 196618, 2, 0, 196652, 2, 0, 196656, 2, 0, 196661, 2, 0, 196665, 2, 0, 196669, 1, 0, 196670, 2, 0, 196671, 2, 0, 262148, 2, 0, 262156, 3, 0, 262157, 2, 0, 262158, 2, 0, 262185, -1073741822, 0, 262210, 2, 0, 262211, 2, 0, 262212, 2, 0, 262213, 2, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327693, 3, 0, 327694, 3, 0, 327723, 1610612738, 0, 327724, 1610612738, 0, 327725, 1610612738, 0, 327726, 1610612738, 0, 327727, 1610612738, 0, 327728, 1610612738, 0, 393237, -1073741822, 0, 524329, -1073741822, 0, 589861, -1073741822, 0, 655394, -1073741822, 0, 720927, -1073741822, 0, 720953, -1073741822, 0, 917551, 2, 0, 917552, 2, 0, 917554, 2, 0, 917555, 2, 0, 917557, 2, 0, 917558, 2, 0, 1048633, 2, 0, 1048634, 2, 0, 1048635, 2, 0, 1048636, 2, 0, 1048637, 2, 0, 1048638, 2, 0, 1048639, 2, 0, 1048640, 2, 0, 1048641, 2, 0, 1048642, 2, 0, 1048643, 2, 0, 1048644, 2, 0, 1048645, 2, 0, 1048646, 2, 0 )
+
+[node name="Items" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+format = 1
+tile_data = PoolIntArray( -131073, 7, 0, -196606, 9, 0, -65537, 7, 0, -131070, 9, 0, -1, 7, 0, -65534, 9, 0, 65535, 7, 0, 2, 9, 0, 131071, 7, 0, 131072, 7, 0, 131089, 9, 0, 131136, 10, 0, 196624, 7, 0, 196667, 10, 0, 196683, 6, 0, 262160, 7, 0, 262217, 9, 0, 327696, 7, 0, 327753, 9, 0, 393289, 9, 0, 458825, 9, 0, 524359, 10, 0, 524360, 10, 0, 917575, 10, 0 )
+
+[node name="Triggers" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 100, 100 )
+format = 1
+tile_data = PoolIntArray( 786481, 11, 0 )
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="TrigCFG" type="Node" parent="."]
+script = ExtResource( 8 )
+
+[node name="TrigHandler" parent="." instance=ExtResource( 6 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 491.59
+margin_right = 1179.59
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 1 )
+text = "Get Started"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FlyingBox" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7050, 450 )
+
+[node name="Sprite" type="Sprite" parent="FlyingBox"]
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="FlyingBox"]
+texture = ExtResource( 5 )
+offset = Vector2( 100, 0 )
+
+[node name="Sprite3" type="Sprite" parent="FlyingBox"]
+texture = ExtResource( 5 )
+offset = Vector2( 200, 0 )
+
+[node name="Sprite4" type="Sprite" parent="FlyingBox"]
+texture = ExtResource( 5 )
+offset = Vector2( 300, 0 )

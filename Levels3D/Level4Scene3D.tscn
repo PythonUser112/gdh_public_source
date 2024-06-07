@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Levels3D/assets/Tileset3d2d.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels3D/assets/TileMapToTile3D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://Levels3D/assets/PlayerCube3D.tscn" type="PackedScene" id=4]
+
+[node name="Level4Scene3D" type="Spatial"]
+
+[node name="TileMaps" type="Node" parent="."]
+
+[node name="Ground" type="TileMap" parent="TileMaps"]
+visible = false
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 100, 100 )
+format = 1
+tile_data = PoolIntArray( -327650, 3, 0, -262114, 3, 0, -196578, 3, 0, -65538, 3, 0, -131047, 3, 0, -131046, 3, 0, -131045, 3, 0, -131042, 3, 0, -2, 3, 0, -65514, 3, 0, -65513, 3, 0, -65512, 3, 0, -65506, 3, 0, 65534, 3, 0, 19, 3, 0, 20, 3, 0, 21, 3, 0, 30, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 3, 0, 65550, 3, 0, 65551, 3, 0, 65552, 3, 0, 65553, 3, 0, 65554, 3, 0, 65566, 3, 0, 131082, 3, 0, 196618, 3, 0, 262154, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327693, 3, 0, 327694, 3, 0, 327695, 3, 0, 327696, 3, 0, 327697, 3, 0, 327698, 3, 0, 327699, 3, 0, 327700, 3, 0, 327701, 3, 0, 327702, 3, 0, 327703, 3, 0, 327704, 3, 0, 393240, 3, 0, 458776, 3, 0, 524312, 3, 0, 589848, 3, 0, 655384, 3, 0, 720920, 3, 0, 720921, 3, 0, 720922, 3, 0, 720923, 3, 0, 720924, 3, 0, 720925, 3, 0, 720926, 3, 0 )
+
+[node name="Danger" type="TileMap" parent="TileMaps"]
+visible = false
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 100, 100 )
+format = 1
+tile_data = PoolIntArray( -327651, -1073741822, 0, -262115, -1073741822, 0, -196579, -1073741822, 0, -131043, -1073741822, 0, -65507, -1073741822, 0, 3, 2, 0, 7, 2, 0, 15, 2, 0, 29, -1073741822, 0, 65565, -1073741822, 0, 262158, 2, 0, 262163, 2, 0, 262168, 2, 0, 655388, 2, 0 )
+
+[node name="Ground" parent="." instance=ExtResource( 1 )]
+layer = 1
+
+[node name="Danger" parent="." instance=ExtResource( 1 )]
+layer = 4
+
+[node name="TileMapToTile3D" parent="." instance=ExtResource( 2 )]
+
+[node name="PlayerCube3D" parent="." instance=ExtResource( 4 )]
+finish_x = 3000
+
+[node name="Camera" type="Camera" parent="PlayerCube3D"]
+current = true

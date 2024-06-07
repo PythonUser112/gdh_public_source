@@ -1,0 +1,133 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/emojis-for-godot/nodes/EmojiIcon.gd" type="Script" id=1]
+[ext_resource path="res://assets/barHorizontal_green_mid 200.png" type="Texture" id=2]
+[ext_resource path="res://LevelShower.gd" type="Script" id=3]
+[ext_resource path="res://assets/font_small.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/glassPanel_200.png" type="Texture" id=5]
+[ext_resource path="res://addons/emojis-for-godot/emojis/72x72/1f603.tres" type="Texture" id=6]
+[ext_resource path="res://assets/Font.tres" type="DynamicFont" id=7]
+
+[node name="LevelShower" type="Node2D"]
+visible = false
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1100.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainContainer" type="MarginContainer" parent="."]
+margin_left = 200.0
+margin_top = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DataContainer" type="VBoxContainer" parent="MainContainer"]
+margin_right = 300.0
+margin_bottom = 334.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level" type="HBoxContainer" parent="MainContainer/DataContainer"]
+margin_right = 300.0
+margin_bottom = 60.0
+
+[node name="LevelType" type="TextureRect" parent="MainContainer/DataContainer/Level"]
+visible = false
+margin_right = 72.0
+margin_bottom = 72.0
+texture = ExtResource( 6 )
+script = ExtResource( 1 )
+emoji_name = "smiley"
+emoji_size = "72"
+
+[node name="NameLabel" type="Button" parent="MainContainer/DataContainer/Level"]
+margin_right = 12.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 7 )
+
+[node name="Margin" type="MarginContainer" parent="MainContainer/DataContainer"]
+margin_top = 64.0
+margin_right = 300.0
+margin_bottom = 334.0
+
+[node name="ProgressContainer" type="VBoxContainer" parent="MainContainer/DataContainer/Margin"]
+margin_right = 300.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalModeLabel" type="Label" parent="MainContainer/DataContainer/Margin/ProgressContainer"]
+margin_right = 300.0
+margin_bottom = 147.0
+custom_fonts/font = ExtResource( 4 )
+text = "
+Progres
+-------
+
+Normal Mode"
+
+[node name="NormalMode" type="HBoxContainer" parent="MainContainer/DataContainer/Margin/ProgressContainer"]
+margin_top = 151.0
+margin_right = 300.0
+margin_bottom = 178.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progress" type="TextureProgress" parent="MainContainer/DataContainer/Margin/ProgressContainer/NormalMode"]
+margin_right = 200.0
+margin_bottom = 27.0
+value = 50.0
+texture_over = ExtResource( 5 )
+texture_progress = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressLabel" type="Label" parent="MainContainer/DataContainer/Margin/ProgressContainer/NormalMode"]
+margin_left = 204.0
+margin_right = 252.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 4 )
+text = "50"
+
+[node name="PractiseModeLabel" type="Label" parent="MainContainer/DataContainer/Margin/ProgressContainer"]
+margin_top = 182.0
+margin_right = 300.0
+margin_bottom = 239.0
+custom_fonts/font = ExtResource( 4 )
+text = "
+Practise Mode"
+
+[node name="PractiseMode" type="HBoxContainer" parent="MainContainer/DataContainer/Margin/ProgressContainer"]
+margin_top = 243.0
+margin_right = 300.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progress" type="TextureProgress" parent="MainContainer/DataContainer/Margin/ProgressContainer/PractiseMode"]
+margin_right = 200.0
+margin_bottom = 27.0
+value = 50.0
+texture_over = ExtResource( 5 )
+texture_progress = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressLabel" type="Label" parent="MainContainer/DataContainer/Margin/ProgressContainer/PractiseMode"]
+margin_left = 204.0
+margin_right = 252.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 4 )
+text = "50"
+[connection signal="pressed" from="MainContainer/DataContainer/Level/NameLabel" to="." method="_on_NameLabel_pressed"]
