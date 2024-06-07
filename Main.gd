@@ -7,7 +7,7 @@ var levels = {"Get Started":1, "What the fuck!?":2, "Demo":3, "MusicBox":4,
 			  "Power Trip 2":6, "Vault of Secrets":7, "Something went wrong":5}
 var ext = "_progress.txt"
 
-func _ready():
+func start():
 	$MainContainer.show()
 	$PlayContainer/Mover.saving_file = savedir+login_name+ext
 	$PlayContainer/Mover.init([["Get Started", Color(0, 0, 1), "smiley"],

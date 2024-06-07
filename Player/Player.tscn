@@ -63,6 +63,7 @@ process_material = SubResource( 1 )
 emitting = false
 amount = 100
 lifetime = 20.0
+one_shot = true
 speed_scale = 5.0
 explosiveness = 1.0
 randomness = 1.0
